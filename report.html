@@ -29,14 +29,7 @@
         page-break-after: always; break-after: page;
         overflow: hidden;
       }
-      /* Print the URL quietly below the amber bar */
-      .cover-amber-bar::after {
-        content: "Live Demo  ·  travelplanner-dld.netlify.app";
-        display: block; text-align: center;
-        font-family: "Source Code Pro", monospace;
-        font-size: 7.5pt; color: rgba(200,134,10,.55);
-        letter-spacing: 1.2px; padding-top: 10px;
-      }
+
       .demo-dot { animation: none !important; }
 
       /* BODY LAYOUT */
@@ -137,6 +130,12 @@
     .demo-url:hover { color: var(--amber-lt); border-color: var(--amber-lt); }
     .demo-sep { color: #2a3040; font-size: 11pt; }
     .demo-desktop { font-family: 'Source Code Pro', monospace; font-size: 8.5pt; color: #4a4030; background: rgba(232,168,56,.06); border: 1px solid rgba(232,168,56,.14); padding: 3px 10px; border-radius: 4px; }
+    /* Print-safe live link strip inside cover */
+    .demo-print-strip { display: flex; align-items: center; justify-content: space-between; gap: 14px; margin-top: 14px; padding: 11px 18px; border: 1px solid rgba(200,134,10,.3); border-radius: 5px; background: rgba(200,134,10,.05); }
+    .dps-left { display: flex; align-items: center; gap: 10px; }
+    .dps-label { font-family: 'Source Code Pro', monospace; font-size: 8pt; text-transform: uppercase; letter-spacing: 1.8px; color: #4a4030; flex-shrink: 0; }
+    .dps-url { font-family: 'Source Code Pro', monospace; font-size: 10.5pt; font-weight: 700; color: var(--amber-lt); text-decoration: none; }
+    .dps-note { font-family: 'Source Code Pro', monospace; font-size: 8pt; color: #3a3028; flex-shrink: 0; }
   </style>
 </head>
 <body>
@@ -176,6 +175,13 @@
           <div><div class="mlabel">Instructor</div><div class="mval">Sir Bari Ahmed</div></div>
           <div><div class="mlabel">University</div><div class="mval">University of Karachi</div></div>
         </div>
+      </div>
+      <div class="demo-print-strip">
+        <div class="dps-left">
+          <span class="dps-label">Live Demo</span>
+          <a class="dps-url" href="https://travelplanner-dld.netlify.app/" target="_blank">travelplanner-dld.netlify.app</a>
+        </div>
+        <span class="dps-note">&#9654; Open in browser to interact &nbsp;|&nbsp; Desktop recommended</span>
       </div>
       <div class="cover-amber-bar"></div>
     </div>
