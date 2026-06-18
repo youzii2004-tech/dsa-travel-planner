@@ -18,7 +18,8 @@
     .cover-inner { position: relative; z-index: 2; flex: 1; display: flex; flex-direction: column; padding: 52px 60px; }
 
     .cover-header { display: flex; flex-direction: column; align-items: center; margin-bottom: auto; }
-    .ku-logo { width: 80px; height: 80px; object-fit: contain; margin-bottom: 14px; filter: brightness(0) invert(1) sepia(1) saturate(2) hue-rotate(5deg) brightness(1.2); }
+    .ku-logo-circle { width: 78px; height: 78px; border-radius: 50%; background: #fff; display: flex; align-items: center; justify-content: center; margin-bottom: 14px; box-shadow: 0 0 0 2px rgba(232,168,56,.25), 0 3px 14px rgba(0,0,0,.6); }
+    .ku-logo { width: 58px; height: 58px; object-fit: contain; }
     .uni-name { font-family: 'Cinzel', serif; font-size: 10.5pt; letter-spacing: 3.5px; text-transform: uppercase; color: var(--amber-lt); text-align: center; }
     .uni-sub { font-size: 9.5pt; color: #8a7f6a; letter-spacing: 1.5px; text-align: center; margin-top: 4px; }
     .uni-course { font-size: 9.5pt; color: #6a614f; text-align: center; margin-top: 2px; letter-spacing: .8px; }
@@ -76,15 +77,34 @@
     .fig { text-align: center; font-size: 9.5pt; color: var(--muted); font-style: italic; margin: 6px 0 22px; }
     .blank { display: inline-block; border-bottom: 1.5px solid currentColor; min-width: 160px; vertical-align: bottom; opacity: .55; }
     .blank-sm { display: inline-block; border-bottom: 1.5px solid currentColor; min-width: 100px; vertical-align: bottom; opacity: .55; }
+    /* Demo banner */
+    .demo-banner { background: #070d16; border-bottom: 1px solid rgba(200,134,10,.22); padding: 9px 28px; display: flex; align-items: center; justify-content: space-between; gap: 14px; }
+    .demo-live { display: flex; align-items: center; gap: 9px; }
+    .demo-dot { width: 8px; height: 8px; border-radius: 50%; background: #4ade80; flex-shrink: 0; animation: blink 2s ease-in-out infinite; }
+    @keyframes blink { 0%,100%{opacity:1} 50%{opacity:.3} }
+    .demo-label { font-family: 'Source Code Pro', monospace; font-size: 9.5pt; color: var(--amber); font-weight: 500; letter-spacing: .5px; }
+    .demo-url { font-family: 'Source Code Pro', monospace; font-size: 10pt; font-weight: 700; color: #fff; text-decoration: none; letter-spacing: .3px; border-bottom: 1px solid rgba(255,255,255,.25); padding-bottom: 1px; }
+    .demo-url:hover { color: var(--amber-lt); border-color: var(--amber-lt); }
+    .demo-sep { color: #2a3040; font-size: 11pt; }
+    .demo-desktop { font-family: 'Source Code Pro', monospace; font-size: 8.5pt; color: #4a4030; background: rgba(232,168,56,.06); border: 1px solid rgba(232,168,56,.14); padding: 3px 10px; border-radius: 4px; }
   </style>
 </head>
 <body>
 <div class="page">
 
+<div class="demo-banner">
+  <div class="demo-live">
+    <span class="demo-dot"></span>
+    <span class="demo-label">Live Interactive Demo</span>
+    <span class="demo-sep">|</span>
+    <a class="demo-url" href="https://travelplanner-dld.netlify.app/" target="_blank">travelplanner-dld.netlify.app</a>
+  </div>
+  <span class="demo-desktop">&#9888; Optimized for Desktop</span>
+</div>
 <div class="cover">
   <div class="cover-inner">
     <div class="cover-header">
-      <img class="ku-logo" src="ku_logo.jpg" alt="University of Karachi">
+      <div class="ku-logo-circle"><img class="ku-logo" src="ku_logo.jpg" alt="University of Karachi"></div>
       <div class="uni-name">University of Karachi</div>
       <div class="uni-sub">Department of Computer Science</div>
       <div class="uni-course">BSCS 301 &nbsp;·&nbsp; Digital Computer Design Fundamentals</div>
@@ -99,9 +119,9 @@
     <div class="cover-footer">
       <div class="cover-meta-strip">
         <div class="meta-row">
-          <div><div class="mlabel">Submitted By</div><div class="mval"><span class="blank"></span></div></div>
-          <div><div class="mlabel">Roll Number</div><div class="mval"><span class="blank-sm"></span></div></div>
-          <div><div class="mlabel">Semester</div><div class="mval"><span class="blank-sm"></span></div></div>
+          <div><div class="mlabel">Submitted By</div><div class="mval">Muhammad Usaid Siddiqui</div></div>
+          <div><div class="mlabel">Roll Number</div><div class="mval">EB23210006102</div></div>
+          <div><div class="mlabel">Submission Date</div><div class="mval">18 June 2026</div></div>
           <div><div class="mlabel">Course</div><div class="mval">BSCS 301</div></div>
           <div><div class="mlabel">Instructor</div><div class="mval">Sir Bari Ahmed</div></div>
           <div><div class="mlabel">University</div><div class="mval">University of Karachi</div></div>
